@@ -1,0 +1,127 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+        "variables",
+        "base"
+;
+
+// INTRO FOUT
+.wf-loading #Intro {
+visibility: hidden;
+}
+.wf-active #Intro {
+visibility: visible;
+}
+
+.bg-cover{
+  background-size:cover;
+}
+.bg-contain{
+  background-size:contain;
+}
+.bg-center{
+  background-position:center;
+}
+.bg-repeat{
+  background-repeat:repeat;
+}
+.bg-repeat-x{
+  background-repeat:repeat-x;
+}
+.bg-repeat-y{
+  background-repeat:repeat-y;
+}
+.bg-repeat-none{
+  background-repeat:no-repeat;
+}
+.visible-grid{
+  z-index:-5;
+  //border:1px solid rgba(0,0,0,.1);
+  background-image: linear-gradient(to right, rgba(0,0,0,.1) 0, rgba(255,255,255,0)1.5px);
+  background-repeat: repeat-x;
+  background-size: calc(100%/6) 100%;
+  //16.6666667%
+  //margin:0 1rem;
+  //background-image: linear-gradient(to bottom,rgba(0,0,0,.1) 0,rgba(255,255,255,0)1px);
+  //background-repeat: repeat-y;;
+  //background-size:100% 10vh;
+  //background-color:$white;
+}
+body{
+  //background-image: linear-gradient(to bottom,rgba(0,0,0,.1) 0,rgba(255,255,255,0)1px);
+  //background-repeat: repeat-y;;
+  //background-size:100% 24px;
+  //background-color:$white;
+  //color: $black70;
+
+}
+html {
+-webkit-font-smoothing: antialiased;
+}
+
+
+// .bg-angled-line{
+//   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIElEQVQYV2NkQAL/////zwjjgzkgABKAcUBsRmQOSAAAIAYQASyLe4sAAAAASUVORK5CYII=) repeat;
+// }
+.bg-dot-grid-red{
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAF0lEQVQoU2P8z8DwnwEPYBwBCv7/ZwAAIg4R9/GgL8AAAAAASUVORK5CYII=)
+  repeat;
+}
+.bg-dot-grid-navy{
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAGElEQVQoU2MUVg/7z4AHMA5/BW9urGQAAB5DDu5Qo1YTAAAAAElFTkSuQmCC)
+  repeat;
+}
+
+
+.story-section{
+  color:$navy;
+  margin-bottom:0;
+  &:before{
+    border-top: 2px solid $red;
+    color:$red;
+    content:' ';
+    display:block;
+    width:2rem;
+    margin-left:-1rem;
+    margin-right:1rem;
+    padding-top:1.5rem;
+  }
+}
+.story-number{
+  line-height:1;
+  font-size:8rem;
+  color:$red;
+  margin-left:-.03em;
+  margin-bottom:0;
+  //text-shadow: -2px 2px 0 $white, 2px -2px 0 $white, -4px 4px 0 $blue;
+  //text-shadow: 0px 0px 24px $navy, 0 0 100px $red;
+  //text-shadow: 1px 1px 1px $navy, 2px 2px 1px $navy, 3px 3px 1px $navy, 4px 4px 0 $navy;
+  @include breakpoint(s){
+    font-size:12rem;
+  }
+  @include breakpoint(m){
+    font-size:16rem;
+  }
+  @include breakpoint(l){
+    font-size:20rem;
+  }
+}
+.story-metric{
+  margin-top:-1rem;
+  color:$navy;
+  //margin:0;
+  line-height:1;
+  @include breakpoint(s){
+    margin-top:-2rem;
+    font-size:2rem;
+  }
+  @include breakpoint(m){
+    font-size:3rem;
+  }
+  @include breakpoint(l){
+    font-size:4rem;
+  }
+}
