@@ -50,6 +50,28 @@ visibility: visible;
   //background-size:100% 10vh;
   //background-color:$white;
 }
+span.kern{
+  letter-spacing:.02em;
+}
+#Logo{
+  display:block;
+  z-index:5;
+  width:100%;
+  .wheel{
+    animation: spinningWheel 10s linear forwards infinite;
+    transform-origin: center;
+  }
+}
+
+@-webkit-keyframes spinningWheel {
+  0%{transform:rotate(0deg)}
+  100%{transform:rotate(360deg)}
+}
+@keyframes spinningWheel {
+  0%{transform:rotate(0deg)}
+  100%{transform:rotate(360deg)}
+}
+
 body{
   //background-image: linear-gradient(to bottom,rgba(0,0,0,.1) 0,rgba(255,255,255,0)1px);
   //background-repeat: repeat-y;;
