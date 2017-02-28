@@ -11,6 +11,8 @@ $dk-red: #E60000;
 $blue: #67b2e7;
 $navy: #132756;
 
+// Blue used in duotone #183b94
+
 .red-lt  {color:lighten($red,15%);}
 .red     {color:$red;}
 .red-dk  {color:darken($red,15%);}

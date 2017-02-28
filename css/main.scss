@@ -37,15 +37,74 @@ visibility: visible;
 .bg-repeat-none{
   background-repeat:no-repeat;
 }
+
+#LogoContainer{
+  width:6rem;
+  height:6rem;
+  @include breakpoint(s){
+    width:7.5rem;
+    height:7.5rem;
+  }
+  @include breakpoint(l){
+    width:9rem;
+    height:9rem;
+  }
+}
+#LogoType{
+  font-size:2rem;
+  line-height:1;
+  margin-top:2.75rem;
+  margin-bottom:0;
+  @include breakpoint(s){
+    font-size:4rem;
+    margin-top:2.5rem;
+    margin-bottom:0;
+  }
+  @include breakpoint(l){
+    font-size:6rem;
+    margin-top:2.25rem;
+    margin-bottom:0;
+  }
+}
+#YearTitle{
+  font-size:4rem;
+  line-height:1;
+  margin-top:2.75rem;
+  margin-bottom:0;
+  @include breakpoint(s){
+    font-size:6rem;
+    margin-top:2.5rem;
+    margin-bottom:0;
+  }
+  @include breakpoint(l){
+    font-size:9rem;
+    margin-top:2.75rem;
+    margin-bottom:0;
+  }
+}
+
+.site-nav a{
+}
+
+.blueprint{
+  background-image: linear-gradient(to right, rgba(255,255,255,.05) 0, rgba(255,255,255,0)1.5px);
+  background-repeat: repeat;
+  background-size: calc(100%/6) 12rem;
+}
+
 .visible-grid{
   z-index:-5;
   //border:1px solid rgba(0,0,0,.1);
-  background-image: linear-gradient(to right, rgba(0,0,0,.1) 0, rgba(255,255,255,0)1.5px);
+  background-image: linear-gradient(to right, rgba(0,0,255,.08) 0, rgba(255,255,255,0)1.5px);
+
   background-repeat: repeat-x;
   background-size: calc(100%/6) 100%;
 }
 span.kern{
   letter-spacing:.02em;
+}
+.slider{
+  background-color:$white;
 }
 #Logo{
   display:block;
