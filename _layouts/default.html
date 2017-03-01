@@ -19,7 +19,11 @@
     {% include footer.html %}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="{{site.github.url}}/js/slick.min.js"></script>
+    <script src="{{site.github.url}}/js/wow.min.js"></script>
+
     <script>
+      new WOW().init();
+
       $(document).ready(function(){
         $('.slider').slick({
           infinite: false,
@@ -29,9 +33,53 @@
           slidesToScroll: 1,
           //centerMode: true,
         });
+
+        // //Scrolling Animations with Animate.css
+        // var $animation_elements = $('.wow');
+        // var $window = $(window);
+        //
+        // function check_if_in_view() {
+        //   var window_height = $window.height();
+        //   var window_top_position = $window.scrollTop();
+        //   var window_bottom_position = (window_top_position + window_height);
+        //
+        //   $.each($animation_elements, function() {
+        //     var $element = $(this);
+        //     var element_height = $element.outerHeight();
+        //     var element_top_position = $element.offset().top;
+        //     var element_bottom_position = (element_top_position + element_height);
+        //
+        //     //check to see if this current container is within viewport
+        //     if ((element_bottom_position >= window_top_position) &&
+        //         (element_top_position <= window_bottom_position)) {
+        //       $element.addClass('animated');
+        //     } else {
+        //       $element.removeClass('animated');
+        //     }
+        //   });
+        // }
+        //
+        // $window.on('scroll resize', check_if_in_view);
+        // $window.trigger('scroll');
+
+        // Scroll To
+        $(function() {
+          $('a[href*="#"]:not([href="#"])').click(function() {
+            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+              var target = $(this.hash);
+              target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+              if (target.length) {
+                $('html, body').animate({
+                  scrollTop: target.offset().top
+                }, 1000);
+                return false;
+              }
+            }
+          });
+        });
+
       });
     </script>
-    <!-- <script src="{{site.github.url}}/js/wow.min.js"></script> -->
 
   </body>
 

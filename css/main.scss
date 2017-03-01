@@ -165,6 +165,26 @@ html {
     padding-top:1.5rem;
   }
 }
+@-webkit-keyframes story-section {
+  from {
+    width:0;
+    opacity:0;
+  }
+}
+
+@keyframes story-section {
+  from {
+    width:0;
+    opacity:0;
+  }
+}
+
+.story-section{
+  white-space:nowrap;
+  opacity:1;
+    -webkit-animation-name: story-section;
+            animation-name: story-section;
+}
 .story-number{
   line-height:1;
   font-size:8rem;
