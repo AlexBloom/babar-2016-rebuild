@@ -66,19 +66,19 @@ visibility: visible;
     margin-bottom:0;
   }
 }
-#YearTitle{
+.type-grow-2{
   font-size:4rem;
-  line-height:1;
-  margin-top:2.75rem;
+  line-height:1.5;
+  //margin-top:2.75rem;
   margin-bottom:0;
   @include breakpoint(s){
     font-size:6rem;
-    margin-top:2.5rem;
+    //margin-top:2.5rem;
     margin-bottom:0;
   }
   @include breakpoint(l){
     font-size:9rem;
-    margin-top:2.75rem;
+    //margin-top:2.75rem;
     margin-bottom:0;
   }
 }
@@ -199,17 +199,8 @@ html {
   }
 }
 
-//.story-section{
-//  margin-left:0;
-//  //overflow:hidden;
-//  max-width:100%;
-//  opacity:1;
-//  white-space:nowrap;
-//    -webkit-animation-name: story-section;
-//            animation-name: story-section;
-//}
 .story-number{
-  line-height:1;
+  line-height:1.5;
   font-size:8rem;
   color:$red;
   margin-left:-.03em;
@@ -242,4 +233,10 @@ html {
   @include breakpoint(l){
     font-size:4rem;
   }
+}
+.rotate-n45{
+  transform:rotate(-45deg) translateX(2rem) translateY(-.5rem);
+}
+.rotate-n60{
+  transform:rotate(-60deg);
 }
