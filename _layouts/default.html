@@ -16,23 +16,23 @@
     </div>
 
     {% include footer.html %}
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="{{site.github.url}}/js/slick.min.js"></script>
-    <script src="{{site.github.url}}/js/wow.min.js"></script>
-
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    if (typeof jQuery == 'undefined') {
+        document.write(unescape("%3Cscript src='/js/jquery.min.js' type='text/javascript'%3E%3C/script%3E"));
+    }
+    </script>
+    <script type="text/javascript" src="{{site.github.url}}/js/slick.min.js"></script>
+    <script type="text/javascript" src="{{site.github.url}}/js/wow.min.js"></script>
     <script>
       new WOW().init();
-
       $(document).ready(function(){
         $('.slider').slick({
           infinite: false,
           adaptiveHeight: true,
           dots: true,
-          //lazyLoad: 'ondemand',
           slidesToScroll: 1,
-          //centerMode: true,
         });
-
         // Scroll To
         $(function() {
           $('a[href*="#"]:not([href="#"])').click(function() {
@@ -48,9 +48,7 @@
             }
           });
         });
-
     });
-
     </script>
 
   </body>
